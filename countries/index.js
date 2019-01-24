@@ -12,7 +12,7 @@ import CountryList from './src/components/CountryList';
 // Create a component
 function App() {
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <Header headerText={'Countries'} />
       <CountryList />
     </View>

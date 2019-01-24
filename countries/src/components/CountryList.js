@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, ScrollView } from 'react-native';
 import axios from 'axios';
 import CountryDetail from './CountryDetail';
 
@@ -21,10 +21,10 @@ class CountryList extends Component {
 
   render() {
     return (
-      <View>
+      <ScrollView>
         <Text> List of countries</Text>
         { this.renderCountries() }
-      </View>
+      </ScrollView>
     );
   }
 }
