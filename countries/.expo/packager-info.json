@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19003,
+  "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 99235,
-  "expoServerNgrokUrl": "https://ew-xm3.anonymous.auth.exp.direct",
-  "packagerNgrokUrl": "https://packager.ew-xm3.anonymous.auth.exp.direct",
-  "ngrokPid": 99271
+  "packagerPid": 3545,
+  "expoServerNgrokUrl": "https://ib-fs2.anonymous.countries-expo.exp.direct",
+  "packagerNgrokUrl": "https://packager.ib-fs2.anonymous.countries-expo.exp.direct",
+  "ngrokPid": 3561
 }
