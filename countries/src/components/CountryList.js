@@ -4,11 +4,14 @@ import axios from 'axios';
 import CountryDetail from './CountryDetail';
 
 class CountryList extends Component {
-  state = {
-    countries: []
+  constructor(props) {
+    super(props);
+    this.state = {
+      countries: []
+    };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     axios.get('https://restcountries.eu/rest/v2/all')
     .then(result => this.setState({ countries: result.data }));
   }
