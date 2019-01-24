@@ -1,10 +1,11 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 
 function CountryDetail({ country }) {
-  const { alpha3Code, name, capital, population, currencies, area } = country;
+  const { alpha3Code, name, capital, population, currencies, area, latlng } = country;
   const {
     headerContentStyle,
     headerTextStyle,
@@ -12,6 +13,24 @@ function CountryDetail({ country }) {
     thumbTextStyle,
     infoStyle
   } = styles;
+  let zoomLevel = 3;
+
+  function getZoom() {
+    if (area < 2000) {
+      zoomLevel = 8;
+    } else if (area < 100000) {
+      zoomLevel = 7;
+    } else if (area < 300000) {
+      zoomLevel = 6;
+    } else if (area < 1000000) {
+      zoomLevel = 5;
+    } else if (area < 3000000) {
+      zoomLevel = 4;
+    } else {
+      zoomLevel = 3;
+    }
+    return zoomLevel;
+  }
 
   return (
     <Card>
@@ -31,6 +50,12 @@ function CountryDetail({ country }) {
           <Text>Currencies: {currencies[0].code} / {currencies[0].name}</Text>
           <Text>Area: {area}km sq.</Text>
         </View>
+      </CardSection>
+
+      <CardSection>
+        <Button onPress={() => Linking.openURL(`https://www.google.co.uk/maps/@${latlng},${getZoom()}z`)}>
+          Show on map
+        </Button>
       </CardSection>
     </Card>
   );
