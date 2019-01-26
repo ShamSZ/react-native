@@ -14,8 +14,12 @@ class LoginForm extends Component {
     };
     this.onButtonPress = this.onButtonPress.bind(this);
   }
+  
   onButtonPress() {
     const { email, password } = this.state;
+
+    this.setState({ error: '' });
+
     firebase.auth().signInWithEmailAndPassword(email, password)
       .catch(() => {
         //if log in attempt fails, create account:
@@ -47,7 +51,9 @@ class LoginForm extends Component {
           secureTextEntry
         />
       </CardSection>
+
       <Text style={styles.errorTextStyle}>{this.state.error}</Text>
+
       <CardSection>
         <Button onPress={this.onButtonPress}>
           Log in
