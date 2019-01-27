@@ -56,7 +56,7 @@ const styles = {
     paddingLeft: 15
   }
 };
-
+//Take App-level state and inject props from there to the component-level state
 function mapStateToProps(state, ownProps) {
   // return true/false
   const expanded = state.selectedLibraryId === ownProps.library.item.id;
