@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 9774,
-  "expoServerNgrokUrl": "https://ib-fs2.anonymous.countries.exp.direct",
-  "packagerNgrokUrl": "https://packager.ib-fs2.anonymous.countries.exp.direct",
-  "ngrokPid": 9785
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
