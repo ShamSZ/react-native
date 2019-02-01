@@ -9,3 +9,7 @@ export function employeeUpdate({ prop, value }) {
     payload: { prop, value }
   };
 }
+
+export function employeeCreate({ name, phone, shift }) {
+  console.log(name, phone, shift);
+}
