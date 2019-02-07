@@ -5,6 +5,11 @@ import { Card, CardSection, Input, Button } from './common';
 import { employeeUpdate, employeeCreate } from '../actions';
 
 class EmployeeCreate extends Component {
+  constructor(props) {
+    super(props);
+    this.onButtonPress = this.onButtonPress.bind(this);
+  }
+  
   onButtonPress() {
     const { name, phone, shift } = this.props;
     this.props.employeeCreate({ name, phone, shift: shift || 'Monday' });
